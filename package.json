@@ -26,7 +26,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "format:prettier": "prettier --write src",
+    "format:eslint": "eslint --fix src",
+    "format": "yarn format:prettier && yarn format:eslint"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^2.5.0"
   }
 }
