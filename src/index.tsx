@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Container, Row, Col } from "react-bootstrap";
-import { TaskList, TaskCard } from "features";
-import { Root, Title } from "./index.style";
+import { TaskList, TaskCard, CreateTask } from "features";
+import { Root, Header, Title } from "./index.style";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -10,11 +10,10 @@ ReactDOM.render(
   <React.StrictMode>
     <Root>
       <Container>
-        <Row>
-          <Col>
-            <Title>ToDo List</Title>
-          </Col>
-        </Row>
+        <Header className="d-flex flex-row align-items-center">
+          <Title className="flex-grow-1">ToDo List</Title>
+          <CreateTask />
+        </Header>
         <Row>
           <Col xs={8}>
             <TaskList />

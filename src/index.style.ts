@@ -5,6 +5,11 @@ export const Root = styled.div`
   min-height: 100vh;
 `;
 
-export const Title = styled.h1`
+export const Header = styled.div`
   margin-bottom: 25px;
+`;
+
+export const Title = styled.h1`
+  margin: 0;
+  padding: 0;
 `;
