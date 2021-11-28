@@ -1,12 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./app";
+import { Container, Row, Col } from "react-bootstrap";
+import { TaskList, TaskCard } from "features";
+import { Root, Title } from "./index.style";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Root>
+      <Container>
+        <Row>
+          <Col>
+            <Title>ToDo List</Title>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={8}>
+            <TaskList />
+          </Col>
+          <Col xs={4}>
+            <TaskCard />
+          </Col>
+        </Row>
+      </Container>
+    </Root>
   </React.StrictMode>,
   document.getElementById("root")
 );
